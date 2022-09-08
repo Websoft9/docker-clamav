@@ -8,5 +8,9 @@
 
 ```
 apk add sudo
-sudo clamscan /scandir
+sudo clamscan -r /scandir
 ```
+
+#### clamscan 与 clamdscan 有什么区别？
+
+Clamscan 比 Clamdscan 慢，因为必须启动该进程并为传递给它的每个文件重新加载病毒数据库。
