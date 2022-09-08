@@ -1,5 +1,13 @@
 # ClamAv
 
+扫描方案：
+
+```
+docker exec -it clamav sh
+clamscan -ri /scandir --log=myscan.log
+```
+
+myscan.log 为扫描结果，如果包含 Infected files 信息，表明系统有病毒。  
 
 
 ## FAQ
@@ -17,4 +25,4 @@ Clamscan 比 Clamdscan 慢，因为必须启动该进程并为传递给它的每
 
 #### 扫描显示 Infected files 但没有具体信息？
 
-有待进一步研究
+需通过 --log 参数将日志输出到文件，然后通过文件寻找 
