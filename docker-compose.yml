@@ -6,14 +6,14 @@ version: '3.8'
 
 services:
   suitecrm:
-    clamav: clamav/clamav:${APP_VERSION}
-    container_name: ${APP_NAME}
+    clamav: clamav/clamav:$APP_VERSION
+    container_name: $APP_NAME
     volumes:
       - 'clamav:/var/lib/clamav'
-      - '/:/scandir'
+      - '$APP_SCAN_PATH:/scandir'
 networks:
   default:
-    name: ${APP_NETWORK}
+    name: $APP_NETWORK
     external: true
 
 volumes:
