@@ -8,5 +8,5 @@
 
 ```
 apk add sudo
-audo clamscan /scandir
+sudo clamscan /scandir
 ```
